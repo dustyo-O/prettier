@@ -354,6 +354,10 @@ export interface RequiredOptions extends doc.printer.Options {
    */
   jsxBracketSameLine: boolean;
   /**
+   *
+   */
+  htmlAttributeIndent: boolean;
+  /**
    * Format only a segment of a file.
    * @default 0
    */

@@ -5,6 +5,11 @@ const CATEGORY_HTML = "HTML";
 // format based on https://github.com/prettier/prettier/blob/main/src/main/core-options.evaluate.js
 const options = {
   bracketSameLine: commonOptions.bracketSameLine,
+  htmlAttributeIndent: {
+    category: CATEGORY_HTML,
+    type: "int",
+    default: 0,
+  },
   htmlWhitespaceSensitivity: {
     category: CATEGORY_HTML,
     type: "choice",
