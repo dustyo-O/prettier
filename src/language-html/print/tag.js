@@ -5,6 +5,7 @@
 import assert from "node:assert";
 
 import {
+  align,
   hardline,
   indent,
   join,
@@ -265,7 +266,12 @@ function printAttributes(path, options, print) {
 
   /** @type {Doc[]} */
   const parts = [
-    indent([
+    options.htmlAttributeIndent ? align(options.htmlAttributeIndent ,[
+      indent([
+        forceNotToBreakAttrContent ? " " : line,
+        join(attributeLine, printedAttributes),
+      ]),
+    ]) : indent([
       forceNotToBreakAttrContent ? " " : line,
       join(attributeLine, printedAttributes),
     ]),
